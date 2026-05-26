@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     # Update `repoURL` to the Git repo where these manifests are hosted.
-    repoURL: 'https://github.com/your-org/your-repo'
+    repoURL: https://github.com/hacksonX/cicd
     path: 'uptime-kuma/manifests'
     targetRevision: HEAD
   destination:

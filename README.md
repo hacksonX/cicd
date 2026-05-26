@@ -10,9 +10,15 @@ Steps:
 ```bash
 # If you already have Argo CD installed, apply the Application into the argocd namespace:
 kubectl apply -f argocd-application.yaml -n argocd
+kubectl apply -f ../argocd-application-grafana.yaml -n argocd
 ```
 
-3. Argo CD will sync the manifests from `uptime-kuma/manifests` and create the namespace, PVC, Deployment, and Service.
+4. Argo CD will sync the manifests from `uptime-kuma/manifests` and create the namespace, PVC, Deployment, and Service.
 
 Access:
-- NodePort: http://<node-ip>:30080 (or use an Ingress/LoadBalancer)
+- Uptime Kuma NodePort: http://<node-ip>:30080 (or use an Ingress/LoadBalancer)
+- Grafana NodePort: http://<node-ip>:30030
+
+Grafana credentials:
+- Username: `admin`
+- Password: `admin`
